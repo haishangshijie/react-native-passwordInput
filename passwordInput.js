@@ -51,6 +51,7 @@ export default class Password extends Component {
         underlayColor='transparent'>
         <View style={[styles.container,this.props.style]} >
           <TextInput
+            style={{height:45,zIndex:99,position:'absolute',width:45*6,opacity:0}}
             ref='textInput'
             maxLength={this.props.maxLength}
             autoFocus={false}
