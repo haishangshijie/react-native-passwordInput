@@ -88,6 +88,8 @@ export default class Password extends Component {
           </View>)
       }
       else {
+        console.log('Text '+ this.state.text[i])
+
         inputItem.push(
           <View key={i} style={[styles.inputItem,styles.inputItemBorderLeftWidth,this.props.inputItemStyle]}>
             {i < text.length ?
