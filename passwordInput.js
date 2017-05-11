@@ -51,7 +51,7 @@ export default class Password extends Component {
         underlayColor='transparent'>
         <View style={[styles.container,this.props.style]} >
           <TextInput
-            style={{height:45,zIndex:99,position:'absolute',width:45*6,opacity:0}}
+            style={{height:45,zIndex:99,position:'absolute',width:30*6,opacity:0}}
             ref='textInput'
             maxLength={this.props.maxLength}
             autoFocus={false}
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   },
   inputItem: {
     height: 45,
-    width: 45,
+    width: 30,
     justifyContent: 'center',
     alignItems: 'center'
   },
