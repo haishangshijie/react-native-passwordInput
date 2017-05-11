@@ -9,6 +9,7 @@ import React, {
 import {
   StyleSheet,
   View,
+  Text,
   TextInput,
   TouchableHighlight,
   InteractionManager,
