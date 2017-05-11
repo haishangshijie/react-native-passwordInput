@@ -124,7 +124,5 @@ const styles = StyleSheet.create({
   iconStyle: {
     width: 16,
     height: 16,
-    backgroundColor: '#222',
-    borderRadius: 8,
   },
 });
