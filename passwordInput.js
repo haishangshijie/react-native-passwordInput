@@ -78,6 +78,7 @@ export default class Password extends Component {
   _getInputItem(){
     let inputItem = [];
     let {text}=this.state;
+    console.log('Text '+ this.state.text)
     
     for (let i = 0; i < parseInt(this.props.maxLength); i++) {
       if (i == 0) {
