@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor: '#7C7C7C',
-        backgroundColor: '#7C7C7C'
+        borderColor: '#3A1352',
+        backgroundColor: '#3A1352'
     },
     inputItemLeft: {
         height: 40,
