@@ -15,10 +15,6 @@ import {
   InteractionManager,
 } from 'react-native';
 
-let Dimensions = require('Dimensions');
-let ScreenWidth = Dimensions.get('window').width;
-let ScreenHeight = Dimensions.get('window').height;
-
 export default class Password extends Component {
   static propTypes = {
     style: View.propTypes.style,
@@ -56,7 +52,7 @@ export default class Password extends Component {
         underlayColor='transparent'>
         <View style={[styles.container,this.props.style]} >
           <TextInput
-            style={{height:ScreenHeight*0.1,zIndex:99,position:'absolute',width:ScreenWidth*0.35,opacity:0}}
+            style={{height:30,zIndex:99,position:'absolute',width:30*6,opacity:0}}
             ref='textInput'
             maxLength={this.props.maxLength}
             autoFocus={false}
@@ -114,8 +110,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   inputItem: {
-    height: ScreenHeight*0.1,
-    width: ScreenWidth*0.35/6,
+    height: 30,
+    width: 30,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -124,8 +120,8 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   iconStyle: {
-    width: ScreenWidth*0.35/6,
-    height: ScreenHeight*0.1,
+    width: 30,
+    height: 30,
     textAlign:'center',
     color:'#E940ED',
     fontSize:16,
