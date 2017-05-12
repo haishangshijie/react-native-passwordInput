@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     },
     iconStyle: {
         width: 40,
-        height: 40,
+        height: 20,
         textAlign:'center',
         color:'#E940ED',
         fontSize:16,
