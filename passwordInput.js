@@ -118,8 +118,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         borderWidth: 1,
-        borderColor: '#ccc',
-        backgroundColor: '#fff'
+        backgroundColor: '#34114D'
     },
     inputItemLeft: {
         height: 40,
@@ -148,7 +147,7 @@ const styles = StyleSheet.create({
     },
     inputItemBorderLeftWidth: {
         borderLeftWidth: 1,
-        borderColor: '#E940ED',
+        borderColor: '#6E1BA0',
     },
     iconStyle: {
         width: 40,
