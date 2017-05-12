@@ -82,7 +82,7 @@ export default class Password extends Component {
         for (let i = 0; i < parseInt(this.props.maxLength); i++) {
             if(i == 0){
                 inputItem.push(
-                    <View key={i} style={[styles.inputItemLeft,styles.inputItemBorderLeftWidth,this.props.inputItemStyle]}>
+                    <View key={i} style={[styles.inputItemLeft,this.props.inputItemStyle]}>
                         {i < text.length ?
                             <Text style={[styles.iconStyle,this.props.iconStyle]}>
                                 {this.state.text[i]}</Text> : null}
@@ -118,7 +118,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         borderWidth: 1,
-        backgroundColor: '#34114D'
+        borderColor: '#7C7C7C',
+        backgroundColor: '#7C7C7C'
     },
     inputItemLeft: {
         height: 40,
