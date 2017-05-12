@@ -15,6 +15,10 @@ import {
   InteractionManager,
 } from 'react-native';
 
+let Dimensions = require('Dimensions');
+let ScreenWidth = Dimensions.get('window').width;
+let ScreenHeight = Dimensions.get('window').height;
+
 export default class Password extends Component {
   static propTypes = {
     style: View.propTypes.style,
@@ -52,7 +56,7 @@ export default class Password extends Component {
         underlayColor='transparent'>
         <View style={[styles.container,this.props.style]} >
           <TextInput
-            style={{height:45,zIndex:99,position:'absolute',width:30*6,opacity:0}}
+            style={{height:ScreenHeight*0.1,zIndex:99,position:'absolute',width:ScreenWidth*0.35,opacity:0}}
             ref='textInput'
             maxLength={this.props.maxLength}
             autoFocus={false}
@@ -81,22 +85,17 @@ export default class Password extends Component {
     console.log('Text '+ this.state.text)
     
     for (let i = 0; i < parseInt(this.props.maxLength); i++) {
-      if (i == 0) {
-        inputItem.push(
-          <View key={i} style={[styles.inputItem,this.props.inputItemStyle]}>
-            {i < text.length ? <View style={[styles.iconStyle,this.props.iconStyle]} /> : null}
-          </View>)
-      }
-      else {
+
+        //console.log(i);
         console.log('Text '+ this.state.text[i])
 
         inputItem.push(
           <View key={i} style={[styles.inputItem,styles.inputItemBorderLeftWidth,this.props.inputItemStyle]}>
             {i < text.length ?
               <Text style={[styles.iconStyle,this.props.iconStyle]}>
-              this.state.text[i]</Text> : null}
+              {this.state.text[i]}</Text> : null}
           </View>)
-      }
+
     }
     return inputItem;
   }
@@ -115,8 +114,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   inputItem: {
-    height: 45,
-    width: 30,
+    height: ScreenHeight*0.1,
+    width: ScreenWidth*0.35/6,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -125,7 +124,10 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   iconStyle: {
-    width: 16,
-    height: 16,
+    width: ScreenWidth*0.35/6,
+    height: ScreenHeight*0.1,
+    textAlign:'center',
+    color:'#E940ED',
+    fontSize:16,
   },
 });
